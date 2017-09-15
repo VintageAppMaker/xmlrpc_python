@@ -1,0 +1,23 @@
+fsafsfsdf        for file in os.listdir(self.rootpath):
+	   s = s  + "\r\n"+ file
+
+	return self.encode(s) 
+    
+    def run(self):
+        server = SimpleXMLRPCServer((self.url, self.port))
+        print "Listening on port %d..." % self.port
+        
+        # API µî·Ï
+        server.register_function(self.delete,   'delete')
+        server.register_function(self.view  ,   'view')
+        server.register_function(self.backup,   'backup')
+        server.register_function(self.listfile, 'listfile')
+        server.serve_forever()
+     
+def main():
+    bm = BackupManager()
+    bm.run()
+    
+if __name__ == "__main__":
+    main()
+
