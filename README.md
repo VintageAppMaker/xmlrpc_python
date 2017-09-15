@@ -2,6 +2,8 @@
 
 Python xmlrpc를 이용한 서버설정 & data백업
 
+[원본블로그](http://blog.naver.com/adsloader/50151040100)
+
 ![](/data/xmlrpc.gif)
 
 
